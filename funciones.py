@@ -5,8 +5,18 @@ import re
 
 def clean_sites(input_text):
 
-    tupla = re.findall(r"[a-zA-Z][a-zA-Z]\d\d\d\d\d", input_text)
-    return tupla
+    tupla_2_5 = re.findall(r"[a-zA-Z][a-zA-Z]\d\d\d\d\d", input_text)
+    tupla_3_4 = re.findall(r"[a-zA-Z][a-zA-Z][a-zA-Z]\d\d\d\d", input_text)
+
+    suma_tuplas = []
+
+    for i in tupla_2_5:
+        suma_tuplas.append(i)
+    for j in tupla_3_4:
+        suma_tuplas.append(j)
+
+    return(suma_tuplas)
+
 
 
 def link_maker(raw_text):
